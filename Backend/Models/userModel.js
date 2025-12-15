@@ -1,0 +1,1 @@
+console.log("This is where the models for the DB will be stored")
