@@ -1,0 +1,248 @@
+/* Navbar Styles - Neo-Dark Theme */
+.navbar-container {
+  width: 100%;
+  height: 80px;
+  background: rgba(15, 16, 20, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.navbar-content {
+  width: 100%;
+  max-width: 1400px;
+  padding: 0 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Brand */
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.navbar-brand:hover {
+  transform: scale(1.02);
+}
+
+.nav-logo-icon {
+  width: 36px;
+  height: 36px;
+  background: #ffee00;
+  color: #000;
+  font-weight: 800;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(255, 238, 0, 0.2);
+}
+
+.nav-brand-text {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: -0.5px;
+}
+
+/* Navigation Links */
+.navbar-links {
+  display: flex;
+  gap: 2rem;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.nav-link {
+  color: #888;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: all 0.2s ease;
+  padding: 8px 16px;
+  border-radius: 20px;
+}
+
+.nav-link:hover {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.nav-link.active {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.1);
+  font-weight: 600;
+}
+
+/* Actions */
+.navbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.create-new-btn {
+  background: #ffee00;
+  color: #000;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.2s ease;
+}
+
+.create-new-btn span {
+  font-size: 1.2rem;
+  line-height: 1;
+}
+
+.create-new-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(255, 238, 0, 0.25);
+  background: #fff240;
+}
+
+.divider-vertical {
+  width: 1px;
+  height: 24px;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.user-profile {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.user-avatar {
+  width: 36px;
+  height: 36px;
+  background: linear-gradient(135deg, #2d2f36, #1a1b1f);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: border-color 0.2s ease;
+}
+
+.user-avatar:hover {
+  border-color: #ffee00;
+}
+
+.logout-btn {
+  background: transparent;
+  border: none;
+  color: #666;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.logout-btn:hover {
+  background: rgba(239, 68, 68, 0.1);
+  color: #ef4444;
+}
+
+/* Logout Success Message */
+.logout-success-msg {
+  position: absolute;
+  top: 90px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  padding: 12px 24px;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border: 1px solid rgba(74, 222, 128, 0.3);
+  box-shadow: 0 10px 30px -10px rgba(74, 222, 128, 0.2);
+  animation: slideDownFade 0.5s cubic-bezier(0.2, 0.8, 0.2, 1);
+  z-index: 200;
+}
+
+.success-icon {
+  width: 24px;
+  height: 24px;
+  background: #4ade80;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #000;
+}
+
+.logout-success-msg span {
+  color: #4ade80;
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+
+@keyframes slideDownFade {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -20px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+}
+
+/* Mobile Toggle */
+.mobile-toggle {
+  display: none;
+  cursor: pointer;
+}
+
+.hamburger span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: #fff;
+  margin: 5px 0;
+  transition: all 0.3s ease;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .navbar-links {
+    display: none; /* In a real app, this would be a dropdown/drawer */
+  }
+
+  .mobile-toggle {
+    display: block;
+  }
+
+  .create-new-btn {
+    display: none; /* Hide on mobile to save space */
+  }
+}

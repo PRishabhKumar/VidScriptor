@@ -16,7 +16,7 @@ export const AuthProvider = ({children})=>{
     const router = useNavigate()
     const handleRegister = async(username, password, name, email)=>{
         try{
-            const request = await axios.post("/register", {
+            const request = await client.post("/register", {
                 username,
                 password,
                 name,
@@ -38,7 +38,7 @@ export const AuthProvider = ({children})=>{
     }
     const handleLogin = async (username, password)=>{
         try{
-            let request = await axios.post("/login", {
+            let request = await client.post("/login", {
                 username, 
                 password
             })
