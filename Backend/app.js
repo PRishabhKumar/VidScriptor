@@ -2,7 +2,7 @@ import express from "express"
 import path from "path"
 import cors from "cors"
 import mongoose from "mongoose"
-// import userRoutes from "./Routes/userRoutes.js"
+import userRoutes from "./Routes/userRoutes.js"
 const app = express()
 app.use(express.json())
 app.use(express.urlencoded({extended: true}))
@@ -10,7 +10,7 @@ app.use(cors())
 
 app.set("port", process.env.PORT || 3000);
 
-// app.use("/api/v1/users", userRoutes)
+app.use("/api/v1/users", userRoutes)
 
 const startServer = async()=>{
     try{
